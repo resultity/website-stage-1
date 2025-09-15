@@ -200,7 +200,7 @@ const Prism: React.FC<PrismProps> = ({
           wob = mat2(c0, c1, c2, c0);
         }
 
-        const int STEPS = 64;
+        const int STEPS = 28;
 
         for (int i = 0; i < STEPS; i++) {
           p = vec3(f, z);

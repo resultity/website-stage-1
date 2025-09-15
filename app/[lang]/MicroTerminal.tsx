@@ -72,7 +72,7 @@ function generateKeyTail(length = 8): string {
 // Constants
 const KEY_PLACEHOLDER = '**rk-▓▓▓▓▓▓▓▓-▓▓▓▓▓▓▓▓**'
 const CYCLE_MS = 10000
-const CHARS_PER_FRAME = 2
+const CHARS_PER_FRAME = 5
 
 export default function MicroTerminal() {
   // We only need the setter to drive the animation; ignore the state value to avoid "unused var"

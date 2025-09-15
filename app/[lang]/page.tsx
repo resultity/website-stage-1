@@ -18,7 +18,6 @@ import CountUp from "@/components/text/CountUp";
 import Prism from "@/components/unisection/Prism";
 import Squares from "@/components/unisection/Squares";
 import IconCard from "@/components/blocks/IconCard";
-import LightRays from "@/components/unisection/LightRays";
 import Dictionary from "./Dictionary";
 import {
   Play,
@@ -61,10 +60,9 @@ export default function NodePage() {
           [2, 0.25],
         ]}
       >
-        <Prism hueShift={0} animationType="rotate" />
+        <Prism hueShift={-0.25}  />
         <LibGradient color="black" variant={3} />
         <Squares squareSize={256} direction="down" speed={0.1} />
-        <LightRays raysColor="#f9a729" />
 
         <section
           className="hero is-fullheight-with-navbar is-primary"
@@ -477,13 +475,7 @@ export default function NodePage() {
         </section>
       </Unisection>
 
-      <Unisection opacity={[[0, 0.3]]}>
-        <PixelBlast
-          variant="triangle"
-          pixelSize={24}
-          color="#719fe6ff"
-          patternScale={223}
-        />
+
         <section className="">
           <div className="">
             <div className="">
@@ -540,7 +532,7 @@ export default function NodePage() {
             </div>
           </div>
         </section>
-      </Unisection>
+   
 
       <Unisection opacity={[[0, 0.4]]}>
         <Gradient variant="dark"></Gradient>
