@@ -47,7 +47,7 @@ const ru: Dict = {
     },
   },
   flow: {
-    title: "Как это работает",
+    title: "Механика",
     cards: {
       userApp: {
         title: "Приложение → API",

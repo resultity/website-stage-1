@@ -1,5 +1,5 @@
 // app/[lang]/layout.tsx
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -27,6 +27,7 @@ export default async function LangLayout({
         {children}
         <Footer />
         <LanguageSwitcher />
+        <GoogleAnalytics gaId="G-6J117ZKQZP" />
       </WaitlistProvider>
     </Preloader>
   )
