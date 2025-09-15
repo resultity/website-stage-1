@@ -1,0 +1,145 @@
+// Define your two font stacks (both support Cyrillic)
+$primary-font:    'Inter', sans-serif !default;
+$heading-font:    'Montserrat', sans-serif !default;
+$code-font:       'PT Mono', ui-monospace,
+                  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace !default;
+
+// 1) Load Bulma first, passing in your overrides
+@use "bulma/sass" as b with (
+  // Typography
+  $family-primary:    $primary-font,
+  $family-secondary:  $heading-font,
+ $family-monospace:       $code-font,
+ $family-code: $code-font,
+
+  // Color palette
+  $primary:            #f9a729,
+  $link:               #73c2fb,
+  $info:               #73c2fb,
+  $success:            #a8e6cf,
+  $warning:            #ffe599,
+  $danger:             #f6a5a5,
+  $light:              #f4f4f4,
+  $dark:               #333333,
+
+  // Backgrounds
+  $box-background-color:   #090d02,
+  $navbar-dropdown-arrow:  #f9a729,
+
+  // Spacing scale
+  $dimensions:         24 32 48 64 96 128 192 256
+);
+
+// 2) Import Google Fonts for body and headings
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap&subset=cyrillic");
+
+// 3) Code
+
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #000 !important;
+  color: #fff !important;
+  font-family: $primary-font;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
+  
+
+
+p, a, span, div *{
+    font-family: $primary-font;
+}
+code, pre, kbd, samp {
+  font-family: $code-font !important;
+}
+
+// 4) Full-width container retains Bulma defaults
+.container {
+  max-width: 100%;
+  width: 100%;
+}
+
+// 5) Navbar styling
+.navbar,
+.navbar-menu,
+.navbar-item,
+.navbar-link,
+.navbar-dropdown {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.navbar-item:hover,
+.navbar-link:hover {
+  background-color: #111 !important;
+  color: b.$primary !important;
+}
+.navbar-dropdown-content {
+  background-color: #111 !important;
+}
+
+// 6) Headings use the secondary font
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: b.$primary;
+  line-height: 1.2;
+}
+h1 { font-size: 3rem; font-weight: 700; }
+h2 { font-size: 2.5rem; font-weight: 600; }
+h3 { font-size: 2rem; font-weight: 500; }
+
+.hero.is-light .table.comparison-table {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+.hero.is-light .table.comparison-table th,
+.hero.is-light .table.comparison-table td {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+.hero.is-light .table.comparison-table tr:hover {
+  background-color: rgba(0,0,0,0.04) !important;
+}
+
+.hero.is-light strong{
+  color:#000000;
+}
+
+        .navbar-item-run {
+          background-image: linear-gradient(
+            120deg,
+            transparent 0%,
+            rgba(249, 167, 41, 0.9) 50%,
+            transparent 100%
+          );
+          background-size: 400% 100%;
+          background-repeat: no-repeat;
+          animation: shine-once 3s ease-in-out 2;
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes shine-once {
+          0% {
+            background-position: -200% 0%;
+          }
+          50% {
+            background-position: 200% 0%;
+          }
+          100% {
+            background-position: -200% 0%;
+          }
+        }

@@ -1,0 +1,83 @@
+.particles-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.orb-container {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dither-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.aurora-container {
+  position: relative;
+  width: 100%;
+  height: 100%;        /* will work when parent defines height */
+  overflow: hidden;
+}
+.squares-canvas {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+.lightning-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.darkveil-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.threads-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.prism-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.galaxy-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pixel-blast-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.prismatic-burst-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
