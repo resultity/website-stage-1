@@ -79,7 +79,7 @@ export default function MultiTerminalLight() {
     const bodyJson = JSON.stringify(body, null, 2)
 
     const full = [
-      `POST **https://api.rtity.cloud${CHAT_PATH}**`,
+      `POST **https://api.rtity.cloud** ${CHAT_PATH}`,
       LABEL_HEADERS,
       `  Authorization: Bearer ${KEY_PLACEHOLDER}`,
       '  Content-Type: application/json',
@@ -290,7 +290,7 @@ export default function MultiTerminalLight() {
         .terminal-content {
           background: rgba(0,0,0,1) 40%;
           position: relative;
-          padding: 24px;
+          padding: 12px;
           height: 500px;
           overflow: hidden;
           white-space: pre-wrap;

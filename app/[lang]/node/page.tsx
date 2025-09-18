@@ -240,6 +240,7 @@ export default function Page() {
                   imageCol={6}
                   imageSrc="/pages/node/about-1.png"
                   imageAlt=""
+                  inverted
                 >
                   <UniHeader
                     as="h3"
@@ -261,6 +262,7 @@ export default function Page() {
                   imageSrc="/pages/node/about-2.png"
                   imageAlt=""
                   imageRight
+                  inverted
                 >
                   <UniHeader
                     as="h3"
@@ -281,6 +283,7 @@ export default function Page() {
                   imageCol={6}
                   imageSrc="/pages/node/about-3.png"
                   imageAlt=""
+                  inverted
                 >
                   <UniHeader
                     as="h3"

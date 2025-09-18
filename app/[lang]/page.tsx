@@ -39,9 +39,9 @@ import { IconBrandTelegram, IconBrandX } from "@tabler/icons-react";
 import { useWaitlistModal } from "@/components/Waitlist";
 import RLink from "@/components/rlink";
 import { ROUTES as R } from "@/app/routes";
-import {  useLang } from "@/components/locale";
+import { useLang } from "@/components/locale";
 import dicts from "./locale";
-
+import LightRays from "@/components/unisection/LightRays";
 
 export default function NodePage() {
   const { openWaitlist } = useWaitlistModal();
@@ -58,12 +58,13 @@ export default function NodePage() {
           [0, 0.8],
           [1, 0.15],
           [2, 0.25],
+          [3, 0.5],
         ]}
       >
-        <Prism hueShift={-0.25}  />
+        <Prism hueShift={-0.25} />
         <LibGradient color="black" variant={3} />
         <Squares squareSize={256} direction="down" speed={0.1} />
-
+        <LightRays raysColor="#f9a729" />
         <section
           className="hero is-fullheight-with-navbar is-primary"
           style={{ background: "transparent" }}
@@ -328,211 +329,203 @@ export default function NodePage() {
         />
         <section className="hero is-small pt-6 ">
           <div className="hero-body">
-            <div className="">
-              <GlitchText
-                speed={1}
-                enableShadows={true}
-                enableOnHover={true}
-                className="custom-class"
-              >
-                {t.flow.title}
-              </GlitchText>
+            <GlitchText
+              speed={1}
+              enableShadows={true}
+              enableOnHover={true}
+              className="custom-class"
+            >
+              {t.flow.title}
+            </GlitchText>
 
-              <div className="columns is-multiline is-variable ">
-                <div className="column is-6-tablet is-3-desktop ">
-                  <IconCard
-                    icon={<Cloud />}
-                    title={t.flow.cards.userApp.title}
-                    className="has-background-grey-darker"
-                  >
-                    <p>
-                      <strong>{t.flow.cards.userApp.p1.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.userApp.p1.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.userApp.p2.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.userApp.p2.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.userApp.p3.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.userApp.p3.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.userApp.p4.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.userApp.p4.split(". ").slice(1).join(". ")}
-                    </p>
-                  </IconCard>
-                  <div className="has-text-right is-hidden-touch is-hidden-table">
-                    <ArrowDownRight size={96} />
-                  </div>
+            <div className="columns is-multiline is-variable ">
+              <div className="column is-6-tablet is-3-desktop ">
+                <IconCard
+                  icon={<Cloud />}
+                  title={t.flow.cards.userApp.title}
+                  className="has-background-grey-darker"
+                >
+                  <p>
+                    <strong>{t.flow.cards.userApp.p1.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.userApp.p1.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.userApp.p2.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.userApp.p2.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.userApp.p3.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.userApp.p3.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.userApp.p4.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.userApp.p4.split(". ").slice(1).join(". ")}
+                  </p>
+                </IconCard>
+                <div className="has-text-right is-hidden-touch is-hidden-table">
+                  <ArrowDownRight size={96} />
                 </div>
+              </div>
 
-                <div className="column is-6-tablet is-3-desktop">
-                  <div className="is-hidden-touch is-hidden-table pt-6 pb-6 mt-6 mb-6" />
-                  <div className="has-text-right is-hidden-touch is-hidden-table">
-                    <ArrowUpRight size={96} />
-                  </div>
-                  <IconCard
-                    icon={<Network />}
-                    title={t.flow.cards.coordination.title}
-                    className="has-background-grey-darker"
-                  >
-                    <p>
-                      <strong>
-                        {t.flow.cards.coordination.p1.split(".")[0]}.
-                      </strong>{" "}
-                      {t.flow.cards.coordination.p1
-                        .split(". ")
-                        .slice(1)
-                        .join(". ")}
-                    </p>
-                    <p>
-                      <strong>
-                        {t.flow.cards.coordination.p2.split(".")[0]}.
-                      </strong>{" "}
-                      {t.flow.cards.coordination.p2
-                        .split(". ")
-                        .slice(1)
-                        .join(". ")}
-                    </p>
-                    <p>
-                      <strong>
-                        {t.flow.cards.coordination.p3.split(".")[0]}.
-                      </strong>{" "}
-                      {t.flow.cards.coordination.p3
-                        .split(". ")
-                        .slice(1)
-                        .join(". ")}
-                    </p>
-                    <p>
-                      <strong>
-                        {t.flow.cards.coordination.p4.split(".")[0]}.
-                      </strong>{" "}
-                      {t.flow.cards.coordination.p4
-                        .split(". ")
-                        .slice(1)
-                        .join(". ")}
-                    </p>
-                  </IconCard>
+              <div className="column is-6-tablet is-3-desktop">
+                <div className="is-hidden-touch is-hidden-table pt-6 pb-6 mt-6 mb-6" />
+                <div className="has-text-right is-hidden-touch is-hidden-table">
+                  <ArrowUpRight size={96} />
                 </div>
+                <IconCard
+                  icon={<Network />}
+                  title={t.flow.cards.coordination.title}
+                  className="has-background-grey-darker"
+                >
+                  <p>
+                    <strong>
+                      {t.flow.cards.coordination.p1.split(".")[0]}.
+                    </strong>{" "}
+                    {t.flow.cards.coordination.p1
+                      .split(". ")
+                      .slice(1)
+                      .join(". ")}
+                  </p>
+                  <p>
+                    <strong>
+                      {t.flow.cards.coordination.p2.split(".")[0]}.
+                    </strong>{" "}
+                    {t.flow.cards.coordination.p2
+                      .split(". ")
+                      .slice(1)
+                      .join(". ")}
+                  </p>
+                  <p>
+                    <strong>
+                      {t.flow.cards.coordination.p3.split(".")[0]}.
+                    </strong>{" "}
+                    {t.flow.cards.coordination.p3
+                      .split(". ")
+                      .slice(1)
+                      .join(". ")}
+                  </p>
+                  <p>
+                    <strong>
+                      {t.flow.cards.coordination.p4.split(".")[0]}.
+                    </strong>{" "}
+                    {t.flow.cards.coordination.p4
+                      .split(". ")
+                      .slice(1)
+                      .join(". ")}
+                  </p>
+                </IconCard>
+              </div>
 
-                <div className="column is-6-tablet is-3-desktop">
-                  <IconCard
-                    icon={<Cpu />}
-                    title={t.flow.cards.nodeExec.title}
-                    className="has-background-grey-darker"
-                  >
-                    <p>
-                      <strong>{t.flow.cards.nodeExec.p1.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.nodeExec.p1.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.nodeExec.p2.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.nodeExec.p2.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.nodeExec.p3.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.nodeExec.p3.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.nodeExec.p4.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.nodeExec.p4.split(". ").slice(1).join(". ")}
-                    </p>
-                  </IconCard>
-                  <div className="has-text-right is-hidden-touch is-hidden-table">
-                    <ArrowDownRight size={96} />
-                  </div>
+              <div className="column is-6-tablet is-3-desktop">
+                <IconCard
+                  icon={<Cpu />}
+                  title={t.flow.cards.nodeExec.title}
+                  className="has-background-grey-darker"
+                >
+                  <p>
+                    <strong>{t.flow.cards.nodeExec.p1.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.nodeExec.p1.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.nodeExec.p2.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.nodeExec.p2.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.nodeExec.p3.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.nodeExec.p3.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.nodeExec.p4.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.nodeExec.p4.split(". ").slice(1).join(". ")}
+                  </p>
+                </IconCard>
+                <div className="has-text-right is-hidden-touch is-hidden-table">
+                  <ArrowDownRight size={96} />
                 </div>
+              </div>
 
-                <div className="column is-6-tablet is-3-desktop">
-                  <div className="is-hidden-touch is-hidden-table pt-6 pb-6 mt-6 mb-6" />
-                  <IconCard
-                    icon={<Coins />}
-                    title={t.flow.cards.response.title}
-                    className="has-background-grey-darker"
-                  >
-                    <p>
-                      <strong>{t.flow.cards.response.p1.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.response.p1.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.response.p2.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.response.p2.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.response.p3.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.response.p3.split(". ").slice(1).join(". ")}
-                    </p>
-                    <p>
-                      <strong>{t.flow.cards.response.p4.split(".")[0]}.</strong>{" "}
-                      {t.flow.cards.response.p4.split(". ").slice(1).join(". ")}
-                    </p>
-                  </IconCard>
-                </div>
+              <div className="column is-6-tablet is-3-desktop">
+                <div className="is-hidden-touch is-hidden-table pt-6 pb-6 mt-6 mb-6" />
+                <IconCard
+                  icon={<Coins />}
+                  title={t.flow.cards.response.title}
+                  className="has-background-grey-darker"
+                >
+                  <p>
+                    <strong>{t.flow.cards.response.p1.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.response.p1.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.response.p2.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.response.p2.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.response.p3.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.response.p3.split(". ").slice(1).join(". ")}
+                  </p>
+                  <p>
+                    <strong>{t.flow.cards.response.p4.split(".")[0]}.</strong>{" "}
+                    {t.flow.cards.response.p4.split(". ").slice(1).join(". ")}
+                  </p>
+                </IconCard>
               </div>
             </div>
           </div>
         </section>
       </Unisection>
 
+      <Unisection opacity={[[0, 0.1]]}>
+        <PixelBlast
+          variant="triangle"
+          pixelSize={24}
+          color="#719fe6ff"
+          patternScale={223}
+        />
+        <section>
+          <HeroSideBg
+            imageSrc="/pages/main/roadmap.png"
+            imageAlt="Roadmap"
+            contentCol={6}
+            imageCol={6}
+            inverted
+          >
+            <ThreeDFrame variant={4}>
+              <Uniblock opacity={[[1, 0.05]]}>
+                <LibGradient color="black" variant={3} />
+                <LibGradient color="yellow" variant={1} />
+                <div className="p-6">
+                  <UniHeader
+                    as="h2"
+                    header={t.roadmap.header}
+                    subheader={t.roadmap.subheader}
+                    colorText="white"
+                    colorLine="primary"
+                  />
 
-        <section className="">
-          <div className="">
-            <div className="">
-              <HeroSideBg
-                imageSrc="/pages/main/roadmap.png"
-                imageAlt="Roadmap"
-                contentCol={6}
-                imageCol={6}
-                inverted
-              >
-                <ThreeDFrame variant={4}>
-                  <Uniblock opacity={[[1, 0.05]]}>
-                    <LibGradient color="black" variant={3} />
-                    <LibGradient color="yellow" variant={1} />
-                    <div className="p-6">
-                      <UniHeader
-                        as="h2"
-                        header={t.roadmap.header}
-                        subheader={t.roadmap.subheader}
-                        colorText="white"
-                        colorLine="primary"
-                      />
+                  <div className=" mt-5">
+                    <AccentText inverted as="p" text={t.roadmap.bullets.now} />
+                    <AccentText inverted as="p" text={t.roadmap.bullets.next} />
+                    <AccentText
+                      inverted
+                      as="p"
+                      text={t.roadmap.bullets.later}
+                    />
+                  </div>
 
-                      <div className=" mt-5">
-                        <AccentText
-                          inverted
-                          as="p"
-                          text={t.roadmap.bullets.now}
-                        />
-                        <AccentText
-                          inverted
-                          as="p"
-                          text={t.roadmap.bullets.next}
-                        />
-                        <AccentText
-                          inverted
-                          as="p"
-                          text={t.roadmap.bullets.later}
-                        />
-                      </div>
-
-                      <div className="buttons mt-5">
-                        <RLink
-                          route={R.roadmap.href}
-                          className="button  is-rounded is-white"
-                        >
-                          {t.roadmap.viewBtn}
-                        </RLink>
-                      </div>
-                    </div>
-                  </Uniblock>
-                </ThreeDFrame>
-              </HeroSideBg>
-            </div>
-          </div>
+                  <div className="buttons mt-5">
+                    <RLink
+                      route={R.roadmap.href}
+                      className="button  is-rounded is-white"
+                    >
+                      {t.roadmap.viewBtn}
+                    </RLink>
+                  </div>
+                </div>
+              </Uniblock>
+            </ThreeDFrame>
+          </HeroSideBg>
         </section>
-   
+      </Unisection>
 
       <Unisection opacity={[[0, 0.4]]}>
         <Gradient variant="dark"></Gradient>

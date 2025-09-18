@@ -17,6 +17,7 @@ const id: PageLocaleShape<NavbarDict> = {
   runNode: 'Jalankan Node',
   products: 'Produk',
   token: 'Token $RTITY',
+  privacy: 'Kebijakan Privasi',
   company: 'Perusahaan',
   waitlist: 'ᐅ Bergabung ke Waitlist',
   dropdowns: {

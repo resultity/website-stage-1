@@ -8,6 +8,7 @@ export type NavbarDict = {
   runNode: string;
   products: string;
   token: string;
+  privacy: string;
   company: string;
   waitlist: string;
   dropdowns: {

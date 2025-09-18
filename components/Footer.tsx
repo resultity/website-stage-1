@@ -64,6 +64,7 @@ export default function Footer() {
               <li><RLink className="has-text-grey-light" route={R.roadmap.href}>{t.dropdowns.productsRight.roadmap}</RLink></li>
               <li><RLink className="has-text-grey-light" route={R.testnet.href}>{t.dropdowns.productsRight.testnet}</RLink></li>
               <li><RLink className="has-text-grey-light" route={R.token.href}>{t.token}</RLink></li>
+              <li className='is-size-7'><RLink className="has-text-grey-light" route={R.privacy.href}>{t.privacy}</RLink></li>
             </ul>
           </div>
 

@@ -68,7 +68,7 @@ export default function HeroSideBg({
         className={`mobile-bg is-hidden-tablet ${imageRight ? 'align-right' : 'align-left'}`}
         style={{
           backgroundImage: `url(${imageSrc})`,
-          backgroundColor: inverted ? 'rgba(0,0,0,0.6)' : 'rgba(255,255,255,0.6)',
+          backgroundColor: inverted ? 'rgba(0,0,0,0.8)' : 'rgba(255,255,255,0.8)',
         }}
       />
 

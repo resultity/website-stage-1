@@ -24,7 +24,7 @@ const id: WaitlistDict = {
   },
   choices: {
     nodes: {
-      title: "Mengoperasikan node",
+      title: "Operasi node",
       counts: {
         one: "1",
         two: "2",

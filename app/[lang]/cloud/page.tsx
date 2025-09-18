@@ -57,7 +57,7 @@ const useCaseIcons = [
             <div className="">
               <div className="columns">
                 <div className="column is-5 ">
-                  <div className="p-6">
+                  <div className="py-6 px-1">
                     <UniHeader
                       as="h1"
                       header={t.hero.title}

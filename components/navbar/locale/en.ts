@@ -15,6 +15,7 @@ const en: PageLocaleShape<NavbarDict> = {
   runNode: 'Run a Node',
   products: 'Products',
   token: 'Token $RTITY',
+  privacy: 'Privacy Policy',
   company: 'Company',
   waitlist: 'ᐅ Join Waitlist',
   dropdowns: {

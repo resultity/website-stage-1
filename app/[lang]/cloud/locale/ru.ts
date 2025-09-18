@@ -266,7 +266,7 @@ const ru: CloudDict = {
   },
 
   terminalLight: {
-    labels: { headers: "Заголовки:", body: "Тело:" },
+    labels: { headers: "Headers:", body: "Body:" },
     dialogs: [
       [{ role: "user", content: "Как сварить пасту в рисоварке?" }],
       [
