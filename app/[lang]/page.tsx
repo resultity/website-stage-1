@@ -474,7 +474,7 @@ export default function NodePage() {
         </section>
       </Unisection>
 
-      <Unisection opacity={[[0, 0.1]]}>
+      <Unisection opacity={[[0, 0.25]]}>
         <PixelBlast
           variant="triangle"
           pixelSize={24}
